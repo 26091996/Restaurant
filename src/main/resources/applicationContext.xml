@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <context:property-placeholder location="classpath:database.properties" />
+    <context:component-scan base-package="com.project5.Restaurant" />
+    <context:annotation-config/>
+    <mvc:annotation-driven/>
+
+    <mvc:resources mapping="/js/**" location="WEB-INF/js/" />
+    <mvc:resources mapping="/css/**" location="WEB-INF/css/" />
+    <mvc:resources mapping="/scss/**" location="WEB-INF/scss/" />
+    <mvc:resources mapping="/img/**" location="WEB-INF/img/" />
+    <mvc:resources mapping="/assets_for_demo/**" location="WEB-INF/assets_for_demo/" />
+    <mvc:resources mapping="/login/**" location="WEB-INF/login/" />
+
+
+
+
+    <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/pages/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="${db.driver}" />
+        <property name="url" value="${db.url}" />
+        <property name="username" value="${db.username}" />
+        <property name="password" value="${db.password}" />
+    </bean>
+
+    <!-- Session factory -->
+    <bean id="sessionFactory"
+          class="org.springframework.orm.hibernate5.LocalSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="packagesToScan" value="com.project5.Restaurant.Model" />
+        <property name="hibernateProperties">
+            <props>
+                <prop key="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</prop>
+                <prop key="hibernate.connection.autocommit">false</prop>
+                <prop key="hibernate.jdbc.batch_versioned_data">true</prop>
+                <prop key="hibernate.jdbc.fetch_size">1000</prop>
+                <prop key="hibernate.jdbc.batch_size">30</prop>
+                <prop key="hibernate.show_sql">false</prop>
+                <prop key="hibernate.format_sql">false</prop>
+                <prop key="hibernate.use_sql_comments">false</prop>
+                <!--<prop key="hibernate.bytecode.provider">javassist</prop>-->
+                <prop key="hibernate.bytecode.use_reflection_optimizer">true</prop>
+                <prop key="hibernate.default_batch_fetch_size">4</prop>
+                <prop key="hibernate.generate_statistics">true</prop>
+                <prop key="hibernate.connection.url">jdbc:sqlserver://localhost</prop>
+                <prop key="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</prop>
+            </props>
+        </property>
+    </bean>
+
+    <!-- Transaction Manager -->
+    <bean id="transactionManager"
+          class="org.springframework.orm.hibernate5.HibernateTransactionManager">
+        <property name="sessionFactory" ref="sessionFactory" />
+        <qualifier value="transactionManager" />
+    </bean>
+
+    <tx:annotation-driven transaction-manager="transactionManager" />
+
+    <!-- AOP for transaction -->
+    <tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+        <tx:attributes>
+            <tx:method name="get*" read-only="false" />
+            <tx:method name="*" />
+        </tx:attributes>
+    </tx:advice>
+    <aop:config>
+        <aop:pointcut id="serviceOperation"
+                      expression="execution(* com.project5.Restaurant.Service..*(..))" />
+        <aop:advisor pointcut-ref="serviceOperation" advice-ref="transactionAdvice" />
+    </aop:config>
+
+    <bean id="multipartResolver"
+          class="org.springframework.web.multipart.commons.CommonsMultipartResolver" >
+    <property name="maxUploadSizePerFile" value="5242880"/>
+    </bean>
+
+</beans>

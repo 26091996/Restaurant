@@ -1,0 +1,531 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="@localhost">
+  <database-model serializer="dbm" rdbms="MSSQL" format-version="4.4">
+    <root id="1">
+      <ServerType>standalone</ServerType>
+    </root>
+    <database id="2" parent="1" name="master">
+      <ObjectId>1</ObjectId>
+      <Current>1</Current>
+    </database>
+    <database id="3" parent="1" name="tempdb">
+      <ObjectId>2</ObjectId>
+    </database>
+    <database id="4" parent="1" name="model">
+      <ObjectId>3</ObjectId>
+    </database>
+    <database id="5" parent="1" name="msdb">
+      <ObjectId>4</ObjectId>
+    </database>
+    <database id="6" parent="1" name="ReportServer">
+      <ObjectId>5</ObjectId>
+    </database>
+    <database id="7" parent="1" name="ReportServerTempDB">
+      <ObjectId>6</ObjectId>
+    </database>
+    <database id="8" parent="1" name="DWDiagnostics">
+      <ObjectId>7</ObjectId>
+    </database>
+    <database id="9" parent="1" name="DWConfiguration">
+      <ObjectId>8</ObjectId>
+    </database>
+    <database id="10" parent="1" name="DWQueue">
+      <ObjectId>9</ObjectId>
+    </database>
+    <database id="11" parent="1" name="Restaurant">
+      <ObjectId>10</ObjectId>
+      <Visible>1</Visible>
+    </database>
+    <schema id="12" parent="11" name="dbo">
+      <ObjectId>1</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:25:59.907</IntrospectionTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="13" parent="11" name="guest">
+      <ObjectId>2</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:23:07.580</IntrospectionTimestamp>
+    </schema>
+    <schema id="14" parent="11" name="INFORMATION_SCHEMA">
+      <ObjectId>3</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:23:07.587</IntrospectionTimestamp>
+    </schema>
+    <schema id="15" parent="11" name="sys">
+      <ObjectId>4</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:23:07.590</IntrospectionTimestamp>
+    </schema>
+    <schema id="16" parent="11" name="db_owner">
+      <ObjectId>16384</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:23:07.600</IntrospectionTimestamp>
+    </schema>
+    <schema id="17" parent="11" name="db_accessadmin">
+      <ObjectId>16385</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:23:07.603</IntrospectionTimestamp>
+    </schema>
+    <schema id="18" parent="11" name="db_securityadmin">
+      <ObjectId>16386</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:23:07.613</IntrospectionTimestamp>
+    </schema>
+    <schema id="19" parent="11" name="db_ddladmin">
+      <ObjectId>16387</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:23:07.623</IntrospectionTimestamp>
+    </schema>
+    <schema id="20" parent="11" name="db_backupoperator">
+      <ObjectId>16389</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:23:07.630</IntrospectionTimestamp>
+    </schema>
+    <schema id="21" parent="11" name="db_datareader">
+      <ObjectId>16390</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:23:07.637</IntrospectionTimestamp>
+    </schema>
+    <schema id="22" parent="11" name="db_datawriter">
+      <ObjectId>16391</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:23:07.647</IntrospectionTimestamp>
+    </schema>
+    <schema id="23" parent="11" name="db_denydatareader">
+      <ObjectId>16392</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:23:07.653</IntrospectionTimestamp>
+    </schema>
+    <schema id="24" parent="11" name="db_denydatawriter">
+      <ObjectId>16393</ObjectId>
+      <IntrospectionTimestamp>2018-06-02.02:23:07.660</IntrospectionTimestamp>
+    </schema>
+    <table id="25" parent="12" name="tbl_area">
+      <ObjectId>981578535</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:21:49.673</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:21:56.150</ModifiedTimestamp>
+    </table>
+    <table id="26" parent="12" name="tbl_bill">
+      <ObjectId>1093578934</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:22:05.897</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:22:10.410</ModifiedTimestamp>
+    </table>
+    <table id="27" parent="12" name="tbl_billDetail">
+      <ObjectId>1157579162</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:22:10.407</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:22:10.407</ModifiedTimestamp>
+    </table>
+    <table id="28" parent="12" name="tbl_category">
+      <ObjectId>741577680</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:21:33.797</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:21:39.753</ModifiedTimestamp>
+    </table>
+    <table id="29" parent="12" name="tbl_dinnerTable">
+      <ObjectId>1029578706</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:21:56.150</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:22:05.903</ModifiedTimestamp>
+    </table>
+    <table id="30" parent="12" name="tbl_employee">
+      <ObjectId>597577167</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:21:27.700</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:22:05.903</ModifiedTimestamp>
+    </table>
+    <table id="31" parent="12" name="tbl_product">
+      <ObjectId>805577908</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:21:39.747</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:22:10.410</ModifiedTimestamp>
+    </table>
+    <table id="32" parent="12" name="tbl_role">
+      <ObjectId>565577053</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:21:16.103</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:21:27.800</ModifiedTimestamp>
+    </table>
+    <column id="33" parent="25" name="areaID">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="34" parent="25" name="areaName">
+      <Position>2</Position>
+      <DataType>nvarchar(50)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <index id="35" parent="25" name="PK__tbl_area__52936C3746908D1E">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>areaID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="36" parent="25" name="PK__tbl_area__52936C3746908D1E">
+      <ObjectId>997578592</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-06-02.02:21:49.677</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:21:49.677</ModifiedTimestamp>
+      <ColNames>areaID</ColNames>
+      <UnderlyingIndexName>PK__tbl_area__52936C3746908D1E</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="37" parent="26" name="billID">
+      <Position>1</Position>
+      <DataType>bigint|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="38" parent="26" name="dinnerTableID">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="39" parent="26" name="billDate">
+      <Position>3</Position>
+      <DataType>nvarchar(20)|0</DataType>
+    </column>
+    <column id="40" parent="26" name="grand_total">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="41" parent="26" name="employeeID">
+      <Position>5</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <index id="42" parent="26" name="PK__tbl_bill__6D903F232371DB21">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>billID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="43" parent="26" name="PK__tbl_bill__6D903F232371DB21">
+      <ObjectId>1109578991</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-06-02.02:22:05.900</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:22:05.900</ModifiedTimestamp>
+      <ColNames>billID</ColNames>
+      <UnderlyingIndexName>PK__tbl_bill__6D903F232371DB21</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="44" parent="26" name="tbl_bill_ibfk_2">
+      <ObjectId>1141579105</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:22:05.903</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:22:05.903</ModifiedTimestamp>
+      <ColNames>dinnerTableID</ColNames>
+      <RefTableId>1029578706</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>tbl_dinnerTable</RefTableName>
+      <RefKeyName>PK__tbl_dinn__1A02C413A30352AF</RefKeyName>
+      <RefColNames>dinnerTableID</RefColNames>
+    </foreign-key>
+    <foreign-key id="45" parent="26" name="tbl_bill_ibfk_1">
+      <ObjectId>1125579048</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:22:05.900</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:22:05.900</ModifiedTimestamp>
+      <ColNames>employeeID</ColNames>
+      <RefTableId>597577167</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>tbl_employee</RefTableName>
+      <RefKeyName>PK__tbl_empl__C134C9A160A9E382</RefKeyName>
+      <RefColNames>employeeID</RefColNames>
+    </foreign-key>
+    <column id="46" parent="27" name="billDetailID">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="47" parent="27" name="productID">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="48" parent="27" name="billID">
+      <Position>3</Position>
+      <DataType>bigint|0</DataType>
+    </column>
+    <column id="49" parent="27" name="billDetailQuanity">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="50" parent="27" name="billDetailPrice">
+      <Position>5</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="51" parent="27" name="billDetailNote">
+      <Position>6</Position>
+      <DataType>nvarchar(255)|0</DataType>
+    </column>
+    <index id="52" parent="27" name="PK__tbl_bill__C57B0CBAC83631E5">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>billDetailID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="53" parent="27" name="PK__tbl_bill__C57B0CBAC83631E5">
+      <ObjectId>1173579219</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-06-02.02:22:10.410</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:22:10.410</ModifiedTimestamp>
+      <ColNames>billDetailID</ColNames>
+      <UnderlyingIndexName>PK__tbl_bill__C57B0CBAC83631E5</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="54" parent="27" name="tbl_billDetail_ibfk_2">
+      <ObjectId>1189579276</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:22:10.410</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:22:10.410</ModifiedTimestamp>
+      <ColNames>productID</ColNames>
+      <RefTableId>805577908</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>tbl_product</RefTableName>
+      <RefKeyName>PK__tbl_prod__2D10D14A5333FF4A</RefKeyName>
+      <RefColNames>productID</RefColNames>
+    </foreign-key>
+    <foreign-key id="55" parent="27" name="tbl_billDetail_ibfk_3">
+      <ObjectId>1205579333</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:22:10.410</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:22:10.410</ModifiedTimestamp>
+      <ColNames>billID</ColNames>
+      <RefTableId>1093578934</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>tbl_bill</RefTableName>
+      <RefKeyName>PK__tbl_bill__6D903F232371DB21</RefKeyName>
+      <RefColNames>billID</RefColNames>
+    </foreign-key>
+    <column id="56" parent="28" name="categoryID">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="57" parent="28" name="categoryName">
+      <Position>2</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="58" parent="28" name="categoryImage">
+      <Position>3</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <index id="59" parent="28" name="PK__tbl_cate__23CAF1F8464D6D8D">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>categoryID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="60" parent="28" name="PK__tbl_cate__23CAF1F8464D6D8D">
+      <ObjectId>757577737</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-06-02.02:21:33.830</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:21:33.830</ModifiedTimestamp>
+      <ColNames>categoryID</ColNames>
+      <UnderlyingIndexName>PK__tbl_cate__23CAF1F8464D6D8D</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="61" parent="29" name="dinnerTableID">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="62" parent="29" name="areaID">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <column id="63" parent="29" name="dinnerTableName">
+      <Position>3</Position>
+      <DataType>nvarchar(50)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="64" parent="29" name="dinnerTableQuanity">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+    </column>
+    <index id="65" parent="29" name="PK__tbl_dinn__1A02C413A30352AF">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>dinnerTableID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="66" parent="29" name="PK__tbl_dinn__1A02C413A30352AF">
+      <ObjectId>1045578763</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-06-02.02:21:56.150</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:21:56.150</ModifiedTimestamp>
+      <ColNames>dinnerTableID</ColNames>
+      <UnderlyingIndexName>PK__tbl_dinn__1A02C413A30352AF</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="67" parent="29" name="tbl_dinnerTable_ibfk_1">
+      <ObjectId>1077578877</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:21:56.150</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:21:56.150</ModifiedTimestamp>
+      <ColNames>areaID</ColNames>
+      <RefTableId>981578535</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>tbl_area</RefTableName>
+      <RefKeyName>PK__tbl_area__52936C3746908D1E</RefKeyName>
+      <RefColNames>areaID</RefColNames>
+    </foreign-key>
+    <column id="68" parent="30" name="employeeID">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="69" parent="30" name="employeeName">
+      <Position>2</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="70" parent="30" name="userName">
+      <Position>3</Position>
+      <DataType>nvarchar(50)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="71" parent="30" name="passWord">
+      <Position>4</Position>
+      <DataType>nvarchar(50)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="72" parent="30" name="phone">
+      <Position>5</Position>
+      <DataType>nvarchar(50)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="73" parent="30" name="Address">
+      <Position>6</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="74" parent="30" name="roleId">
+      <Position>7</Position>
+      <DataType>int|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <index id="75" parent="30" name="PK__tbl_empl__C134C9A160A9E382">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>employeeID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="76" parent="30" name="PK__tbl_empl__C134C9A160A9E382">
+      <ObjectId>613577224</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-06-02.02:21:27.740</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:21:27.740</ModifiedTimestamp>
+      <ColNames>employeeID</ColNames>
+      <UnderlyingIndexName>PK__tbl_empl__C134C9A160A9E382</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="77" parent="30" name="tbl_product_ibfk_1">
+      <ObjectId>725577623</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:21:27.797</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:21:27.797</ModifiedTimestamp>
+      <ColNames>roleId</ColNames>
+      <RefTableId>565577053</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>tbl_role</RefTableName>
+      <RefKeyName>PK__tbl_role__CD98462A1C495FC2</RefKeyName>
+      <RefColNames>roleId</RefColNames>
+    </foreign-key>
+    <column id="78" parent="31" name="productID">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="79" parent="31" name="categoryID">
+      <Position>2</Position>
+      <DataType>int|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="80" parent="31" name="productName">
+      <Position>3</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="81" parent="31" name="productPrice">
+      <Position>4</Position>
+      <DataType>int|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="82" parent="31" name="productUnit">
+      <Position>5</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="83" parent="31" name="productQuantity">
+      <Position>6</Position>
+      <DataType>int|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="84" parent="31" name="productDetails">
+      <Position>7</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="85" parent="31" name="productImage">
+      <Position>8</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <column id="86" parent="31" name="productStatus">
+      <Position>9</Position>
+      <DataType>nvarchar(255)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
+    </column>
+    <index id="87" parent="31" name="PK__tbl_prod__2D10D14A5333FF4A">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>productID</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="88" parent="31" name="PK__tbl_prod__2D10D14A5333FF4A">
+      <ObjectId>821577965</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-06-02.02:21:39.750</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:21:39.750</ModifiedTimestamp>
+      <ColNames>productID</ColNames>
+      <UnderlyingIndexName>PK__tbl_prod__2D10D14A5333FF4A</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="89" parent="31" name="tbl_category_ibfk_1">
+      <ObjectId>965578478</ObjectId>
+      <CreatedTimestamp>2018-06-02.02:21:39.750</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:21:39.750</ModifiedTimestamp>
+      <ColNames>categoryID</ColNames>
+      <RefTableId>741577680</RefTableId>
+      <RefSchemaName>dbo</RefSchemaName>
+      <RefTableName>tbl_category</RefTableName>
+      <RefKeyName>PK__tbl_cate__23CAF1F8464D6D8D</RefKeyName>
+      <RefColNames>categoryID</RefColNames>
+    </foreign-key>
+    <column id="90" parent="32" name="roleId">
+      <Position>1</Position>
+      <DataType>int|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="91" parent="32" name="rolename">
+      <Position>2</Position>
+      <DataType>nvarchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="32" name="roleValue">
+      <Position>3</Position>
+      <DataType>nvarchar(50)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <index id="93" parent="32" name="PK__tbl_role__CD98462A1C495FC2">
+      <Position>1</Position>
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>roleId</ColNames>
+      <Clustering>1</Clustering>
+      <Unique>1</Unique>
+    </index>
+    <key id="94" parent="32" name="PK__tbl_role__CD98462A1C495FC2">
+      <ObjectId>581577110</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-06-02.02:21:16.110</CreatedTimestamp>
+      <ModifiedTimestamp>2018-06-02.02:21:16.110</ModifiedTimestamp>
+      <ColNames>roleId</ColNames>
+      <UnderlyingIndexName>PK__tbl_role__CD98462A1C495FC2</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
